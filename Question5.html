@@ -1,0 +1,43 @@
+<!-- Question 5-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Question5</title>
+    </head>
+
+    <body>
+        <div>
+            <div class="singer"> James Bay</div>
+            <div class="singer"> Nate Ruess</div>
+            <div class="singer"> Ed Sheeran</div>
+            <div class="singer"> Steve Garrigan</div>
+        </div>
+        <p id="demo"></p>
+
+        <script>
+            const TagElements = document.getElementsByTagName("div");
+            
+            // Print second element Nate Ruess
+            document.getElementById("demo").innerHTML = "The Text of Second Element (index 2) is:"
+                                        + TagElements[2].innerHTML;
+
+            
+            // Print out All Elements
+            for (i=0; i < TagElements.length ; i++) {
+                EleByEle = TagElements[i].innerHTML;
+                console.log(EleByEle);
+            }
+
+
+
+        </script>
+
+
+    </body>
+
+</html>
