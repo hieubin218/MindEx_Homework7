@@ -1,0 +1,52 @@
+<!-- Question 5-->
+<!-- Read (DOM) by class name using getElementsByClassName function-->
+<!-- Print out Second Element (singer- Nate Ruess) and Print ALL elements by For Loop -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Question5</title>
+    </head>
+
+    <body>
+        <div>
+            <div class="singer"> James Bay</div>
+            <div class="singer"> Nate Ruess</div>
+            <div class="singer"> Ed Sheeran</div>
+            <div class="singer"> Steve Garrigan</div>
+        </div>
+        <p id="demo"></p>
+
+        <script>
+            // Read Elements by ClassName function
+            const TagElements = document.getElementsByClassName("singer");
+            
+            // Print second element Nate Ruess
+            document.getElementById("demo").innerHTML = "The Text of Second Element (index 2) is:"
+                                        + TagElements[1].innerHTML;
+
+            
+            // Print out All Elements by For Loop
+                // Solution 1
+            for (i=0; i < TagElements.length ; i++) {
+                element = TagElements[i].innerHTML;
+                console.log(element);
+            }
+
+                // Solution 2
+            for(let item of TagElements) {
+                console.log(item.innerHTML);
+            }
+
+
+
+        </script>
+
+
+    </body>
+
+</html>
