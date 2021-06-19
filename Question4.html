@@ -1,0 +1,54 @@
+<!-- Question 4: -->
+<!-- Use getElementByTagName function get All of the <li> tag-->
+<!-- Print out first element <Articles> and then print All by for loop -->
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Question4</title>
+    </head>
+
+
+    <body>
+        <!-- A list of <li> Tags with there Texts -->
+        <ul>
+            <li> News </li>
+            <li> Articles </li>
+            <li> Blog </li>
+        </ul>
+        
+        <p id="demo"></p>
+
+        <script>
+            // Read the <li> Elements by TagName function
+            const WholeElements = document.getElementsByTagName("li");
+            
+            // Print out First element is <li> Article </li>
+            document.getElementById("demo").innerHTML = "The Text of First Element (index 1) is:"
+                                        + WholeElements[1].innerHTML;
+
+            
+            // Print out All Elements by For Loop
+                // Solution 1:
+            for (i=0; i < WholeElements.length ; i++) {
+                item = WholeElements[i].innerHTML;
+                console.log(item);
+            }
+            
+                // Solution 2:
+            for (let element of WholeElements) {
+                console.log(element.innerHTML);
+            }
+
+ 
+
+        </script>
+        
+    </body>
+</html>
